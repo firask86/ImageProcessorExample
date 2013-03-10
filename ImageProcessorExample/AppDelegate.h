@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+    NSString* databasePath;
+	sqlite3* database;
+	sqlite3_stmt* selectTodoItemStatement;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

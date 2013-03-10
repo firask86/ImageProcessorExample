@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ImageProcessor.h"
 
 @implementation AppDelegate
 
@@ -14,9 +15,33 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    
+    databasePath = [self databasesPath];
+	NSError *error;
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"IMAGE_READER.sqlite"];
+	BOOL success = [fileManager fileExistsAtPath:databasePath];
+	
+	NSLog(@"If needed, bundled default DB is at: %@",defaultDBPath);
+	
+	NSLog(@"Database didn't exist... Copying default from resource dir");
+    if (!success) {
+	success = [fileManager copyItemAtPath:defaultDBPath toPath:databasePath error:&error];
+    }
+
+    
+    ImageProcessor* mainPage = [[ImageProcessor alloc] initWithNibName:@"ImageProcessor" bundle:nil];
+    UINavigationController* uinavigation = [[UINavigationController alloc] initWithRootViewController:mainPage];
+    uinavigation.navigationBarHidden = true;
+    [self.window addSubview:mainPage.view];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+-(NSString*) databasesPath {
+	NSString* documentsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]; // Just take it to 0 check definition
+	NSLog(@"%@",[documentsDir stringByAppendingPathComponent: @"IMAGE_READER.sqlite"]);
+	return [documentsDir stringByAppendingPathComponent: @"IMAGE_READER.sqlite"];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

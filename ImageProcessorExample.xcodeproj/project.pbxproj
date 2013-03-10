@@ -21,6 +21,11 @@
 		FA75EBBE16ED044F00B1C04A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA75EB9F16ED044F00B1C04A /* Foundation.framework */; };
 		FA75EBC616ED044F00B1C04A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA75EBC416ED044F00B1C04A /* InfoPlist.strings */; };
 		FA75EBC916ED044F00B1C04A /* ImageProcessorExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA75EBC816ED044F00B1C04A /* ImageProcessorExampleTests.m */; };
+		FA75EBD716ED046700B1C04A /* islam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA75EBD616ED046700B1C04A /* islam.jpg */; };
+		FA75EBDC16ED04A700B1C04A /* ImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = FA75EBDA16ED04A700B1C04A /* ImageProcessor.m */; };
+		FA75EBDD16ED04A700B1C04A /* ImageProcessor.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA75EBDB16ED04A700B1C04A /* ImageProcessor.xib */; };
+		FA75EBDF16ED0B8000B1C04A /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FA75EBDE16ED0B8000B1C04A /* libsqlite3.0.dylib */; };
+		FA75EBE116ED129700B1C04A /* IMAGE_READER.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FA75EBE016ED129700B1C04A /* IMAGE_READER.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,12 @@
 		FA75EBC516ED044F00B1C04A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA75EBC716ED044F00B1C04A /* ImageProcessorExampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageProcessorExampleTests.h; sourceTree = "<group>"; };
 		FA75EBC816ED044F00B1C04A /* ImageProcessorExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageProcessorExampleTests.m; sourceTree = "<group>"; };
+		FA75EBD616ED046700B1C04A /* islam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = islam.jpg; sourceTree = "<group>"; };
+		FA75EBD916ED04A700B1C04A /* ImageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessor.h; sourceTree = "<group>"; };
+		FA75EBDA16ED04A700B1C04A /* ImageProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageProcessor.m; sourceTree = "<group>"; };
+		FA75EBDB16ED04A700B1C04A /* ImageProcessor.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageProcessor.xib; sourceTree = "<group>"; };
+		FA75EBDE16ED0B8000B1C04A /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		FA75EBE016ED129700B1C04A /* IMAGE_READER.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMAGE_READER.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA75EBDF16ED0B8000B1C04A /* libsqlite3.0.dylib in Frameworks */,
 				FA75EB9E16ED044F00B1C04A /* UIKit.framework in Frameworks */,
 				FA75EBA016ED044F00B1C04A /* Foundation.framework in Frameworks */,
 				FA75EBA216ED044F00B1C04A /* CoreGraphics.framework in Frameworks */,
@@ -82,6 +94,7 @@
 		FA75EB8E16ED044F00B1C04A = {
 			isa = PBXGroup;
 			children = (
+				FA75EBDE16ED0B8000B1C04A /* libsqlite3.0.dylib */,
 				FA75EBA316ED044F00B1C04A /* ImageProcessorExample */,
 				FA75EBC116ED044F00B1C04A /* ImageProcessorExampleTests */,
 				FA75EB9C16ED044F00B1C04A /* Frameworks */,
@@ -115,6 +128,9 @@
 				FA75EBAC16ED044F00B1C04A /* AppDelegate.h */,
 				FA75EBAD16ED044F00B1C04A /* AppDelegate.m */,
 				FA75EBA416ED044F00B1C04A /* Supporting Files */,
+				FA75EBD916ED04A700B1C04A /* ImageProcessor.h */,
+				FA75EBDA16ED04A700B1C04A /* ImageProcessor.m */,
+				FA75EBDB16ED04A700B1C04A /* ImageProcessor.xib */,
 			);
 			path = ImageProcessorExample;
 			sourceTree = "<group>";
@@ -122,6 +138,8 @@
 		FA75EBA416ED044F00B1C04A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA75EBE016ED129700B1C04A /* IMAGE_READER.sqlite */,
+				FA75EBD616ED046700B1C04A /* islam.jpg */,
 				FA75EBA516ED044F00B1C04A /* ImageProcessorExample-Info.plist */,
 				FA75EBA616ED044F00B1C04A /* InfoPlist.strings */,
 				FA75EBA916ED044F00B1C04A /* main.m */,
@@ -227,6 +245,8 @@
 				FA75EBB016ED044F00B1C04A /* Default.png in Resources */,
 				FA75EBB216ED044F00B1C04A /* Default@2x.png in Resources */,
 				FA75EBB416ED044F00B1C04A /* Default-568h@2x.png in Resources */,
+				FA75EBD716ED046700B1C04A /* islam.jpg in Resources */,
+				FA75EBDD16ED04A700B1C04A /* ImageProcessor.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA75EBC616ED044F00B1C04A /* InfoPlist.strings in Resources */,
+				FA75EBE116ED129700B1C04A /* IMAGE_READER.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +284,7 @@
 			files = (
 				FA75EBAA16ED044F00B1C04A /* main.m in Sources */,
 				FA75EBAE16ED044F00B1C04A /* AppDelegate.m in Sources */,
+				FA75EBDC16ED04A700B1C04A /* ImageProcessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +379,7 @@
 		FA75EBCD16ED044F00B1C04A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageProcessorExample/ImageProcessorExample-Prefix.pch";
 				INFOPLIST_FILE = "ImageProcessorExample/ImageProcessorExample-Info.plist";
@@ -368,6 +391,7 @@
 		FA75EBCE16ED044F00B1C04A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageProcessorExample/ImageProcessorExample-Prefix.pch";
 				INFOPLIST_FILE = "ImageProcessorExample/ImageProcessorExample-Info.plist";
@@ -429,6 +453,7 @@
 				FA75EBCE16ED044F00B1C04A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA75EBCF16ED044F00B1C04A /* Build configuration list for PBXNativeTarget "ImageProcessorExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +462,7 @@
 				FA75EBD116ED044F00B1C04A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
